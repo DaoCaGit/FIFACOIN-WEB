@@ -1,0 +1,411 @@
+/*!
+ * FIFACOIN.COM
+ * v1.0
+ * coins.css
+ */
+
+/*coins-quantity-box start*/
+.coins-quantity-box {
+	width: 100%;
+	background-color: #f6f6f6;
+}
+
+.coins-quantity-box .platform-show {
+	height: 100%;
+	background-color: #2f333e;
+	width: 220px;
+	color: #f2a506;
+	line-height: 100px;
+	text-align: center;
+}
+
+.coins-quantity-box .platform-show .icon {
+	font-size: 50px;
+	vertical-align: middle;
+}
+
+.coins-quantity-box .platform-show>span {
+	color: #f2a506;
+	font-size: 26px;
+	vertical-align: middle;
+	padding: 0 5px;
+}
+
+.coins-quantity-box .coins-input {
+	display: inline-block;
+	padding: 20px 20px;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.coins-quantity-box .coins-input input {
+	width: 152px;
+    min-height: 60px;
+    border-radius: 0;
+    border: 1px solid #e7e7e7;
+    vertical-align: middle;
+    padding: 6px 12px;
+    font-size: 20px;
+    float: left;
+}
+
+.coins-quantity-box .coins-input input.final-qty {
+	width: 184px;
+	font-size: 28px;
+}
+
+/*.coins-quantity-box .coins-input .final-group:before {
+	display: inline-block;
+	float: left;
+	content: "\e635";
+	font-family: "iconfont" !important;
+	font-size: 26px;
+	line-height: 60px;
+	padding-right: 8px;
+	padding-left: 12px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}*/
+
+.coins-quantity-box .coins-input .final-group {
+	position: relative;
+	float: left;
+}
+
+.final-group .describe {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	font-size: 12px;
+	color: #666666;
+}
+
+.final-group .describe .gift-text {
+	cursor: pointer;
+	color: #f2a506;
+	font-size: 12px;
+}
+
+.final-group .describe .icon {
+	font-size: 14px;
+	padding-right: 2px;
+} 
+
+.coins-quantity-box .coins-input>span {
+	display: inline-block;
+	float: left;
+	vertical-align: middle;
+	line-height: 60px;
+	font-size: 24px;
+	color: #333333;
+	padding: 0 4px;
+}
+
+.coins-quantity-box .coins-input span .icon {
+	color: #2f333e;
+	font-size: 26px;
+	width: 26px;
+}
+
+.coins-quantity-box .coins-sub {
+	display: inline-block;
+	padding: 20px 30px 0 0;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.coins-quantity-box .coins-sub button {
+	padding: 9px 32px;
+	font-weight: bold;
+	font-size: 28px
+
+}
+
+@media (max-width: 767px){
+	.coins {
+		padding: 0;
+	}
+
+	.coins .content {
+		padding: 10px;
+	}
+
+	.coins-quantity-box {
+		height: auto;
+		min-height: auto;
+		overflow: hidden;
+	}
+
+	.coins-quantity-box .platform-show {
+		width: 100%;
+		line-height: 1.4;
+	}
+
+	.coins-quantity-box .coins-input {
+		width: 100%;
+		padding: 5px 15px;
+	}
+
+	.coins-quantity-box .coins-input>span {
+		display: inline-block;
+		float: left;
+		vertical-align: middle;
+		line-height: 40px;
+		font-size: 16px;
+		color: #333333;
+		padding: 0 4px;
+	}
+	
+  	.coins-quantity-box .coins-input .final-group {
+  		width: 100%;
+  		line-height: 40px;
+
+  	}
+
+	.coins-quantity-box .coins-input .final-group:before {
+		line-height: 40px;
+		padding-left: 0;
+	}
+
+	.coins-quantity-box .coins-input input.final-qty {
+		font-size: 24px;
+	}
+
+	.final-group .describe {
+		position: relative;
+		width: 100%;
+		bottom: auto;
+		float: left;
+		padding: 8px 0;
+		display: block;
+	    font-size: 18px;
+	    color: #666666;
+	}
+
+	.final-group .describe .gift-text {
+		font-size: 20px;
+	}
+
+	.coins-quantity-box .coins-input>span.give-qty::after {
+	    content: "\A";
+	    white-space: pre;
+	}
+
+
+	.coins-quantity-box .coins-input span .icon {
+		display: block;
+		width: 100%;
+	}
+
+	.coins-quantity-box .coins-input input {
+	    width: 30%;
+	    height: 40px;
+	    padding: 4px 10px;
+	    font-size: 14px;
+	}
+
+	.coins-input>input,
+	.coins-input>span {
+		margin: 20px 0;
+	}
+
+	.coins-quantity-box .coins-sub {
+		padding: 20px 0 0 0;
+		width: 100%;
+	}
+
+	.coins-quantity-box .coins-sub button {
+		padding: 8px 24px;
+		border-radius: 0;
+		font-size: 20px;
+		width: 100%;
+	}
+
+}
+
+/*coins-quantity-box end*/
+
+/*special-pay start*/
+.special-pay {
+	padding: 30px;
+}
+
+.special-pay>ul>li{
+	margin-left: 10px;
+}
+
+.special-pay button {
+	border-color: #d6d6d6;
+	padding: 7px 9px;
+	width: 200px;
+	font-size: 16px;
+	color: #333333;
+	vertical-align: middle;
+}
+
+.special-pay button .icon {
+	font-size: 30px;
+	vertical-align: middle;
+}
+@media (max-width: 767px) {
+	.special-pay {
+		margin: -5px;
+	}
+
+	.special-pay {
+		margin-top: 15px;
+		padding: 10px 0;
+	}
+
+	.special-pay>ul>li {
+		width: 50%;
+		margin: 0;
+		padding: 0 5px;
+		font-size: 12px;
+	}
+
+	.special-pay button {
+		width: 100%;
+		padding: 8px 8px;
+		font-size: 14px;
+	}
+
+	.special-pay button .icon {
+		font-size: 16px;
+	}
+
+}
+
+/*special-pay end*/
+
+
+/*prd-list-table start*/
+.prd-list-table {
+	margin-bottom: 50px;
+	font-size: 20px;
+}
+
+.prd-list-table .table {
+    border: 1px solid #e7e7e7;
+}
+
+.prd-list-table .table>thead>tr>th {
+	line-height: 33px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.prd-list-table .table>tbody>tr>th {
+	color: #666666;
+}
+
+.prd-list-table .table>thead>tr>th:first-child,
+.prd-list-table .table>tbody>tr>th:first-child {
+	padding-left: 20px;
+}
+
+.prd-list-table .table>thead>tr>th:last-child,
+.prd-list-table .table>tbody>tr>td:last-child {
+	padding-right: 30px;
+	text-align: right;
+}
+
+.prd-list-table .table>tbody>tr>td {
+	color: #666666;
+}
+
+.prd-list-table .table>tbody>tr>td .qty-text {
+	font-size: 22px;
+	color: #333333;
+	padding-right: 10px;
+	padding-left: 18px;
+}
+
+.prd-list-table .table>tbody>tr>td .gift-text {
+	font-size: 22px;
+}
+
+.prd-list-table .table>tbody>tr>td .price {
+	font-size: 22px;
+	color: #333;
+}
+
+.prd-list-table .table>tbody>tr>td button {
+	padding: 5px 11px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.prd-list-table .voucher-btn {
+	display: inline-block;
+	width: 116px;
+	height: 34px;
+	background: url('../images/voucher-btn.png') no-repeat;
+	text-align: center;
+	line-height: 34px;
+	color: #fff;
+	font-size: 14px;
+	margin-right: 4px;
+}
+
+.prd-list-table .voucher-btn:hover {
+	background: url('../images/voucher-btn-hover.png') no-repeat;
+}
+
+@media (max-width: 767px) {
+	.prd-list-table .table>thead>tr>th:first-child {
+		display: none;
+	}
+
+	.prd-list-table .table>tbody>tr>th:first-child {
+		display: none;
+	}
+
+	.prd-list-table .table>tbody>tr>td .gift-text {
+		font-size: 16px;
+	}
+
+	.prd-list-table .table>tbody>tr>td .qty-text {
+		font-size: 16px;
+		padding: 0;
+	}
+	
+	.prd-list-table .table>tbody>tr>td button {
+		padding: 4px;
+	}
+
+	.prd-list-table .table>thead>tr>th:last-child, 
+	.prd-list-table .table>tbody>tr>td:last-child {
+		padding-right: 8px;
+	}	
+}
+/*prd-list-table end */
+
+/* new */
+.bg-coins {
+	background: url('../images/coin-bg.png') no-repeat;
+	background-position: center top;
+}
+
+.bg-coins .breadcrumb {
+	background-color: transparent;
+}
+
+.bg-coins main {
+	background: url('../images/coin-bg04.png') no-repeat;
+	background-position: bottom right;
+}
+
+.checkstrock {
+	position: absolute;
+	top: -30px;
+	left: 0;
+	color: #f25f06; 
+	font-size: 18px;
+	display: none;
+}
+
+.checkstrock .icon {
+	font-size: 20px;
+	margin-right: 5px;
+}

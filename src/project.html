@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="FIFACOIN">
+    <meta name="author" content="WeiRuiDaoCao">
+    <meta name="keywords" content="FIFACOIN">
+    <meta name="description" content="FIFACOIN">
+
+    <link rel="icon" href="favicon.ico">
+
+    <title>FIFACOIN.COM</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- iconfont CSS -->
+    <!--     <link rel="stylesheet" href="css/iconfont/iconfont.css"> -->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_69t9gffotgt7f1or.css">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/global.css" rel="stylesheet">
+    <link href="../css/customer.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link href="../css/pages.css" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        background: #19154b;
+    }
+
+    .breadcrumb {
+        background: #19154b;
+    }
+
+    .project {
+        min-height: 600px;
+        background: #19154b;
+    }
+
+    .project-title {
+        text-align: center;
+        margin-top: 45px;
+    }
+
+    .part-pro {
+        position: relative;
+        z-index: 1;
+    }
+
+    #top-image {
+        background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/project/p-bg.png') no-repeat fixed;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 0;
+        height: 100%;
+    }
+
+    .part-pro .part-pro-bg {
+        width: 1200px;
+        height: 771px;
+        background: url('../images/project/p-bg.png') no-repeat;
+        position: absolute;
+        top: 0;
+        left: -100px;
+        z-index: -1;
+    }
+
+    .part-pro-01 {
+        min-height: 815px;
+        margin-top: 30px;
+    }
+
+    .table-pro {
+        width: 775px;
+        margin-left: 325px;
+        background: #14123a;
+        z-index: 1;
+        margin-top: 70px;
+        pointer-events: none;
+    }
+
+    .table>thead>tr>th {
+        color: #fff;
+        padding: 13px;
+        border-bottom: 3px solid #fff;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .table>tbody>tr>td {
+        border-top: 1px solid #434161;
+        color: #fff;
+        text-align: center;
+        font-size: 20px;
+        padding: 7px;
+        height: 51px;
+    }
+
+    .text-green {
+        color: #c0ff36;
+    }
+
+    .btn-probuy {
+        background: #fa257f;
+        border-radius: 2px;
+        font-size: 18px;
+        color: #fff;
+        padding: 4px 13px;
+        pointer-events: auto;
+    }
+
+    .btn-probuy:hover,
+    .btn-probuy:active,
+    .btn-probuy:focus {
+        background: #cc1965;
+        color: #fff;
+    }
+
+    .btn-probuy.disabled:hover,
+    .btn-probuy.disabled:active,
+    .btn-probuy.disabled:focus {
+        background: #fa257f;     
+    }
+
+    .palaer-pro {
+        position: absolute;
+        left: 85px;
+        top: -65px;
+    }
+
+    .text-pro {
+        color: #fff;
+        text-align: right;
+        padding-right: 98px;
+    }
+
+    .part-pro section {
+        width: 725px;
+    }
+
+    .part-pro section h4 {
+        font-size: 36px;
+        color: #c0ff36;
+        margin-bottom: 22px;
+    }
+
+    .part-pro section p {
+        font-size: 18px;
+        color: #fff;
+        margin-bottom: 13px;
+    }
+
+    .part-pro .bage {
+        display: inline-block;
+        border-radius: 50%;
+        text-align: center;
+        width: 22px;
+        height: 22px;
+        background: #c0ff36;
+        color: #19154b;
+        margin-right: 10px;
+        position: absolute;
+        left: 0;
+    }
+
+    .part-pro-02 {
+        margin-top: 32px;
+        padding-left: 90px;
+        padding-bottom: 85px;
+    }
+
+    .part-pro-02 section p {
+        position: relative;
+        padding-left: 32px;
+    }
+
+    .part-pro-02 .palaer-pro {
+        right: 30px;
+        left: auto;
+        top: 20px;
+    }
+
+    .a-info {
+        font-size: 18px;
+        color: #fff;
+        position: absolute;
+        left: 4px;
+        bottom: -10px;
+    }
+
+    .a-info span {
+        color: #c0ff36;
+    }
+
+    .part-pro-03 {
+        padding-left: 90px;
+        margin-top: 90px;
+        margin-bottom: 80px;
+    }
+
+    .part-pro-03-bg {
+        width: 984px;
+        height: 243px;
+        background: url('../images/project/p-bg02.png');
+        margin-top: 22px;
+        margin-bottom: 10px;
+    }
+
+    .part-pro-03 .table {
+        background: transparent;
+    }
+
+    .part-pro-03 .table-pro {
+        margin-left: 235px;
+        width: 610px;
+    }
+
+    .part-pro-03 .table>thead>tr>th {
+        color: #fff;
+        padding: 8px;
+        border-bottom: 1px solid #fff;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .part-pro-03 .table>tbody>tr>td {
+        border-top: 0;
+        height: 36px;
+    }
+
+    .part-pro-03 .table-pro {
+        margin-top: 0;
+    }
+</style>
+
+<body>
+    <!-- fifa-masthead start -->
+    <div class="fifa-masthead">
+        <div class="container">
+
+            <!-- masthead-top start -->
+            <div class="masthead-top clearfix">
+                <ul class="clearfix">
+                    <li>
+                        <div class="signin"><a href=""><i class="icon iconfont icon-guanjiaowangtubiao01"></i><span>Sign in</span></a></div>
+                    </li>
+
+                    <li>
+                        <span class="separate"></span>
+                    </li>
+
+                    <li>
+                        <ul class="language-show">
+                            <li><a href="###" title="USA"><i class="language-usa effect"></i><span class="country-name show">USA</span></a></li>
+                            <li><a href="###" title="DE"><i class="language-de effect"></i><span class="country-name">DE</span></a></li>
+                            <li><a href="###" title="IT"><i class="language-it effect"></i><span class="country-name">IT</span></a></li>
+                            <li><a href="###" title="FR"><i class="language-fr effect"></i><span class="country-name">FR</span></a></li>
+                            <li><a href="###" title="AR"><i class="language-ar effect"></i><span class="country-name">AR</span></a></li>
+                            <li><a href="###" title="AR"><i class="language-ar01 effect"></i><span class="country-name">AR</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <span class="separate"></span>
+                    </li>
+
+                    <li>
+                        <div class="select-language dropdown">
+                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown"><span>USD</span><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">EUR</a></li>
+                                <li><a href="">GBP</a></li>
+                                <li><a href="">AUD</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- masthead-top end -->
+
+            <!-- masthead-bottom start -->
+            <div class="masthead-bottom">
+                <div class="logo">
+                    <a href="../"><img src="../images/logo/header-logo.png" alt="FIFACOIN-LOGO"></a>
+                </div>
+            </div>
+            <!-- masthead-bottom end -->
+
+        </div>
+    </div>
+    <!-- fifa-masthead end -->
+
+    <!-- fifa-header start -->
+    <div class="fifa-header">
+
+        <!-- nav start -->
+        <nav class="navbar navbar-default bg-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FIFA17 Coins2.0 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FFIFA17 Coins<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#contact">FIFA17 packs</a></li>
+                        <li><a href="#contact">How to Buy</a></li>
+                        <li><a href="#contact">Sponsorship</a></li>
+                        <li><a href="#contact">Affiliate</a></li>
+                        <li><a href="#contact">FAQ</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+        <!-- nav end -->
+
+    </div>
+    <!-- fifa-header end -->
+
+    <!-- breadcrumb start -->
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="icon iconfont icon-shouye"></i>Home</a></li>
+            <li><a href="#">FIFA 17 Coins 2.0</a></li>
+            <li class="active">PS4</li>
+        </ol>
+    </div>
+    <!-- breadcrumb end -->
+
+    <main>
+        <div class="project">
+            <div class="container">
+                <!-- project-title start -->
+                <div class="project-title">
+                    <img src="../images/project/title.png" alt="TITLE">
+                </div>
+                <!-- project-title end -->
+
+                <!-- part-pro-01 start -->
+                <div class="part-pro part-pro-01 clearfix">
+                    <div class="part-pro-bg" id="img-move"></div>
+                    <img class="wow bounceInLeft palaer-pro" data-wow-delay="0.2s" src="../images/project/player.png" alt="">
+
+                    <table class="table table-pro">
+                        <thead>
+                            <tr>
+                                <th width="22%">Voucher</th>
+                                <th width="28%">Discount</th>
+                                <th width="30%">Needs To Pay</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>5<small>$</small></td>
+                                <td>2<small>%</small></td>
+                                <td class="text-green">4.9<small>$</small></td>
+                                <td><a href="###" class="btn btn-probuy disabled" disabled="disabled">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td>10<small>$</small></td>
+                                <td>3<small>%</small></td>
+                                <td class="text-green">9.7<small>$</small></td>
+                                <td><a href="###" class="btn btn-probuy">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td>20<small>$</small></td>
+                                <td>3<small>%</small></td>
+                                <td class="text-green">19.4<small>$</small></td>
+                                <td><a href="###" class="btn btn-probuy">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td>30<small>$</small></td>
+                                <td>3<small>%</small></td>
+                                <td class="text-green">29.1<small>$</small></td>
+                                <td><a href="###" class="btn btn-probuy">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td>30<small>$</small></td>
+                                <td>3<small>%</small></td>
+                                <td class="text-green">29.1<small>$</small></td>
+                                <td><a href="###" class="btn btn-probuy">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td>30<small>$</small></td>
+                                <td>3<small>%</small></td>
+                                <td class="text-green">29.1<small>$</small></td>
+                                <td><a href="###" class="btn btn-probuy">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td>30<small>$</small></td>
+                                <td>3<small>%</small></td>
+                                <td class="text-green">29.1<small>$</small></td>
+                                <td><a href="###" class="btn btn-probuy">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td>30<small>$</small></td>
+                                <td>3<small>%</small></td>
+                                <td class="text-green">29.1<small>$</small></td>
+                                <td><a href="###" class="btn btn-probuy">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td>30<small>$</small></td>
+                                <td>3<small>%</small></td>
+                                <td class="text-green">29.1<small>$</small></td>
+                                <td><a href="###" class="btn btn-probuy">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td>30<small>$</small></td>
+                                <td>3<small>%</small></td>
+                                <td class="text-green">29.1<small>$</small></td>
+                                <td><a href="###" class="btn btn-probuy">Buy Now</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="text-pro">No cash refund/exchange. Voucher can only be used once.</p>
+                </div>
+                <!-- part-pro-01 end -->
+
+                <div class="part-pro part-pro-02">
+                    <section>
+                        <h4>HOW TO BUY VOUCHERS?</h4>
+                        <p><span class="bage">1</span> Select the voucher you wish to buy.</p>
+                        <p><span class="bage">2</span>Check out and successfully send your payment. </p>
+                        <p><span class="bage">3</span>Wait for the Email that will tell you the voucher is available to be used.</p>
+                        <p><span class="bage">4</span>It will take about 30 minutes to receive the voucher.</p>
+                    </section>
+
+                    <section style="margin-top: 50px;">
+                        <h4>HOW TO USE THE VOUCHER?</h4>
+                        <p><span class="bage">1</span>Select the coins amount and turn to the check out page, select your voucher
+                            and click “submit”, you will get coins in seconds.</p>
+                        <p><span class="bage">2</span>Select “Player Auction” or “Comfort Trade” to transfer your coins.</p>
+                    </section>
+
+                    <p style="color: #c0ff36; font-size: 18px; margin-bottom: 5px; margin-top: 22px;">CONSOLE:</p>
+                    <img src="../images/project/console.png" alt="">
+
+                    <div class="wow bounceInRight palaer-pro" data-wow-delay="0.3s">
+                        <img src="../images/project/player02.png" alt="">
+                        <p class="a-info"><span>Activity Time:</span>9. 20 – 10. 20 UK Time</p>
+                    </div>
+                </div>
+
+                <div class="part-pro part-pro-03">
+                    <section>
+                        <h4>AN EXTRA PROFIT</h4>
+                        <p>If you buy the vouchers during the activity time, you can get a chance to win bonus:</p>
+                        <div class="wow bounceInLeft part-pro-03-bg" data-wow-delay="0.2s">
+                            <table class="table table-pro">
+                                <thead>
+                                    <tr>
+                                        <th width="22%" >Place</th>
+                                        <th>Number Of People</th>
+                                        <th width="35%">Bonus</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Grand Prize</td>
+                                        <td>1</td>
+                                        <td><span class="price text-green">500K </span><small> (FIFA 18 Coins)</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td>First prize</td>
+                                        <td>2</td>
+                                        <td><span class="price text-green">300K </span><small>(FIFA 18 Coins)</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Second prize</td>
+                                        <td>2</td>
+                                        <td><span class="price text-green">100K</span> <small>(FIFA 18 Coins)</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Third prize</td>
+                                        <td>5</td>
+                                        <td><span class="price text-green">50K</span> <small>(FIFA 18 Coins)</small></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Every order has an unique ID, it will be the only thing to be considered as the winner to get the
+                            bonus.
+                        </p>
+                        <p><span class="text-green">BONUS RELEASING TIME:</span> 09:00 10.20,2017 UK Time</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="fifa-service">
+            <div class="container">
+                <ul>
+                    <li>
+                        <div class="service-box">
+                            <div class="service-box-left">
+                                <i class="icon iconfont icon-manyi"></i>
+                            </div>
+                            <div class="service-box-right">
+                                <h4>99.9%<br>Satisfaction</h4>
+                                <span>More than 1,200,000 FIFA players have used our services. </span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="service-box">
+                            <div class="service-box-left">
+                                <i class="icon iconfont icon-rocket"></i>
+                            </div>
+                            <div class="service-box-right">
+                                <h4>Fast<br>Delivery</h4>
+                                <span>At least 93% of orders are completed in less than 12 minutes!</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="service-box">
+                            <div class="service-box-left">
+                                <i class="icon iconfont icon-anquan"></i>
+                            </div>
+                            <div class="service-box-right">
+                                <h4>Secure<br>Transaction</h4>
+                                <span>100% secure online payment system proved by 1.2 million users.</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="service-box">
+                            <div class="service-box-left">
+                                <i class="icon iconfont icon-tuikuan"></i>
+                            </div>
+                            <div class="service-box-right">
+                                <h4>Refund<br>Guaranteed</h4>
+                                <span>Full money back if you want to cancel your orders!</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="service-box">
+                            <div class="service-box-left">
+                                <i class="icon iconfont icon-liaotian"></i>
+                            </div>
+                            <div class="service-box-right">
+                                <h4>24/7<br>Live chat</h4>
+                                <span>Live answers to your questions, 24/7.</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="fifa-contact">
+            <div class="container">
+                <ul class="clearfix">
+                    <li class="col-wp-2">
+                        <dl class="nacgation">
+                            <dt>NAVIGATION</dt>
+                            <dd><a href="###">Home</a></dd>
+                            <dd><a href="###">Sell To Us</a></dd>
+                            <dd><a href="###">Contact Us</a></dd>
+                            <dd><a href="###">Contact Us</a></dd>
+                        </dl>
+                    </li>
+                    <li class="col-wp-6">
+                        <dl class="payments">
+                            <dt>PAYMENTS</dt>
+                            <dd><img src="../images/payment.png" alt="payments"></dd>
+                        </dl>
+                    </li>
+                    <li class="col-wp-2">
+                        <dl class="followus">
+                            <dt>FOLLOW US</dt>
+                            <dd><img src="../images/ico/us.png" alt="payments"></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="fifa-copyright">
+            Copyright 2016 Privacy Policy | Terms & Conditions
+        </div>
+    </footer>
+
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="../js/jquery1.12.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script>
+        (function ($) {
+            $.iosParallax = function (el, options) {
+                // To avoid scope issues, use 'base' instead of 'this'
+                // to reference this class from internal events and functions.
+                var base = this;
+
+                // Access to jQuery and DOM versions of element
+                base.$el = $(el);
+                base.el = el;
+
+                // Add a reverse reference to the DOM object
+                base.$el.data("iosParallax", base);
+
+                var centerCoordinates = {
+                    x: 0,
+                    y: 0
+                };
+                var targetCoordinates = {
+                    x: 0,
+                    y: 0
+                };
+                var transitionCoordinates = {
+                    x: 0,
+                    y: 0
+                };
+
+                function getBackgroundImageUrl() {
+                    var backgroundImage = base.$el.css('background-image').match(/url\(.*\)/ig);
+                    if (!backgroundImage || backgroundImage.length < 1) {
+                        throw 'No background image found';
+                    }
+                    return backgroundImage[0].replace(/url\(|'|"|'|"|\)$/ig, "");
+                }
+
+                function getBackgroundImageSize() {
+                    var img = new Image;
+                    img.src = getBackgroundImageUrl();
+                    return {
+                        width: img.width,
+                        height: img.height
+                    };
+                }
+
+                function setCenterCoordinates() {
+                    var bgImgSize = getBackgroundImageSize();
+                    centerCoordinates.x = -1 * Math.abs(bgImgSize.width - base.$el.width()) / 2;
+                    centerCoordinates.y = -1 * Math.abs(bgImgSize.height - base.$el.height()) / 2;
+                    targetCoordinates.x = centerCoordinates.x;
+                    targetCoordinates.y = centerCoordinates.y;
+                    transitionCoordinates.x = centerCoordinates.x;
+                    transitionCoordinates.y = centerCoordinates.y;
+                }
+
+                function bindEvents() {
+                    base.$el.mousemove(function (e) {
+                        var width = base.options.movementFactor / base.$el.width();
+                        var height = base.options.movementFactor / base.$el.height();
+                        var cursorX = e.pageX - ($(window).width() / 2);
+                        var cursorY = e.pageY - ($(window).height() / 2);
+                        targetCoordinates.x = width * cursorX * -1 + centerCoordinates.x;
+                        targetCoordinates.y = height * cursorY * -1 + centerCoordinates.y;
+                    });
+
+                    // Slowly converge the background image position to the target coordinates in 60 FPS
+                    var loop = setInterval(function () {
+                        transitionCoordinates.x += ((targetCoordinates.x - transitionCoordinates.x) /
+                            base.options.dampenFactor);
+                        transitionCoordinates.y += ((targetCoordinates.y - transitionCoordinates.y) /
+                            base.options.dampenFactor);
+                        base.$el.css("background-position", transitionCoordinates.x + "px " +
+                            transitionCoordinates.y + "px");
+                    }, 16);
+
+                    $(window).resize(function () {
+                        // Re-center the image
+                        setCenterCoordinates();
+                    });
+
+                    // There's a problem with getting image height and width when the image isn't loaded.
+                    var img = new Image;
+                    img.src = getBackgroundImageUrl();
+                    $(img).load(function () {
+                        setCenterCoordinates();
+                    });
+                };
+
+                base.init = function () {
+                    base.options = $.extend({}, $.iosParallax.defaultOptions, options);
+                    bindEvents();
+                };
+
+                base.init();
+            };
+
+            $.iosParallax.defaultOptions = {
+                // How fast the background moves
+                movementFactor: 50,
+                // How much to dampen the movement (higher is slower)
+                dampenFactor: 36
+            };
+
+            $.fn.iosParallax = function (options) {
+                return this.each(function () {
+                    (new $.iosParallax(this, options));
+                });
+            };
+
+        })(jQuery);
+
+        $('#img-move').iosParallax({
+            // How fast the background moves
+            movementFactor: 50,
+            // How much to dampen the movement (higher is slower)
+            dampenFactor: 36
+        });
+
+        if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+            new WOW().init();
+        };
+    </script>
+</body>
+
+</html>
