@@ -30,12 +30,20 @@ var Config = {
         dir: SRC_DIR + 'js',
         src: SRC_DIR + 'js/**/*.js', // JS目录：./src/js/  
         dist: DIST_DIR + 'js', // JS文件build后存放的目录：./dist/js  
-        build_name: 'build.js' // 合并后的js的文件名  
+        build_name: 'main.js' // 合并后的js的文件名  
     },
     img: {
         dir: SRC_DIR + 'images',
         src: SRC_DIR + 'images/**/*', // images目录：./src/images/  
         dist: DIST_DIR + 'images' // images文件build后存放的目录：./dist/images  
+    },
+    font: {
+        dir: SRC_DIR + 'fonts',
+        src: SRC_DIR + 'fonts/**/*', // fonts目录：./src/fonts/  
+        dist: DIST_DIR + 'fonts' // fonts文件build后存放的目录：./dist/fonts 
+    },
+    rev: {
+        dist: DIST_DIR + 'rev' // fonts文件build后存放的目录：./dist/fonts  
     }
 };
 

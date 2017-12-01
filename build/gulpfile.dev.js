@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer'); // 处理css中浏览器兼容的前缀
-var contentInclude = require('gulp-content-includer');
+var fileinclude = require('gulp-file-include');
 var gulpif = require('gulp-if');
 var rename = require('gulp-rename'); //重命名  
 var cssnano = require('gulp-cssnano'); // css的层级压缩合并
@@ -14,8 +14,8 @@ var reload = browserSync.reload;
 var Config = require('./gulpfile.config.js');
 
 // 排除 js 
-var condition = function(f){
-    if(f.path.endsWith('.min.js')){
+var condition = function (f) {
+    if (f.path.endsWith('.min.js')) {
         return false;
     }
     return true;
@@ -27,17 +27,26 @@ function dev() {
      * HTML处理 
      */
     gulp.task('html:dev', function () {
-        return gulp.src(Config.html.src).pipe(gulp.dest(Config.html.dist)).pipe(reload({
-            stream: true
-        }));
+        return gulp.src(Config.html.src)
+            .pipe(fileinclude({
+                prefix: '@@',//变量前缀 @@include
+                basepath: './src/_include',//引用文件路径
+                indent:true//保留文件的缩进
+            }))
+            .pipe(gulp.dest(Config.html.dist))
+            .pipe(reload({
+                stream: true
+            }));
     });
     /** 
      * concat 
      */
     gulp.task('concat:dev', function () {
         gulp.src(Config.html.src)
-            .pipe(contentInclude({
-                includerReg: /<!\-\-include\s+"([^"]+)"\-\->/g
+            .pipe(fileinclude({
+                prefix: Config.include.prefix,//变量前缀
+                basepath: Config.include.dir,//引用文件路径
+                indent:true//保留文件的缩进
             }))
             .pipe(gulp.dest(Config.html.dist))
             .pipe(reload({
@@ -68,16 +77,24 @@ function dev() {
             stream: true
         }));
     });
+
     /** 
      * js处理 
      */
+    // gulp.task('js:dev', function () {
+    //     return gulp.src(Config.js.src)
+    //     .pipe(gulpif(condition, jshint('.jshintrc')))
+    //     .pipe(jshint.reporter('default'))
+    //     .pipe(gulp.dest(Config.js.dist)).pipe(reload({
+    //         stream: true
+    //     }));
+    // });
+
     gulp.task('js:dev', function () {
         return gulp.src(Config.js.src)
-        .pipe(gulpif(condition, jshint('.jshintrc')))
-        .pipe(jshint.reporter('default'))
-        .pipe(gulp.dest(Config.js.dist)).pipe(reload({
-            stream: true
-        }));
+            .pipe(gulp.dest(Config.js.dist)).pipe(reload({
+                stream: true
+            }));
     });
 
     /** 
@@ -93,7 +110,18 @@ function dev() {
         }));
     });
 
-    gulp.task('dev', ['html:dev', 'concat:dev', 'css:dev', 'sass:dev', 'js:dev', 'assets:dev', 'images:dev'], function () {
+    /**
+     * 字体处理
+     */
+    gulp.task('font:dev', function () {
+        return gulp.src(Config.font.src)
+            .pipe(gulp.dest(Config.font.dist)).pipe(reload({
+                stream: true
+            }));
+    });
+
+
+    gulp.task('dev', ['html:dev', 'css:dev', 'sass:dev', 'js:dev', 'assets:dev', 'images:dev', 'font:dev'], function () {
         browserSync.init({
             server: {
                 baseDir: Config.dist

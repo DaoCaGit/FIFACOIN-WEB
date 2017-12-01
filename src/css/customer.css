@@ -1450,8 +1450,7 @@ ul.statistics li a:hover {
 }
 
 .auction .attention2-container .submit-btn {
-	margin-left: 210px;
-	!important;
+	margin-left: 210px !important;
 }
 
 .auction .attention2-container .dropdown-toggle {
