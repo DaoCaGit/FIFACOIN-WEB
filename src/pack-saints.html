@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./head.html')
+
+<style>
+    .bg-animation {
+        background-color: #23272e;
+        background-image: url(./images/activity/saints/chrp-bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center -35px;
+        height: auto;
+    }
+
+    .pack1-body {
+        position: relative;
+        padding-top: 60px;
+        padding-bottom: 0px;
+    }
+
+    .breadcrumb {
+        visibility: hidden;
+    }
+
+    .pack1-header {
+        border: 0;
+    }
+
+    .pack1-header h4 {
+        font-size: 22px;
+    }
+
+    .chrp-title {
+        margin-bottom: 15px;
+    }
+
+    .pack1-header {
+        margin-left: 42px;
+    }
+
+    .pack1-header p {
+        font-size: 16px;
+    }
+
+    .pack1-header p::before {
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin: 6px;
+        border-radius: 50%;
+        background-color: #de7d15;
+        vertical-align: middle;
+    }
+
+    .pack1-body .btn-animation {
+        background: url(./images/activity/saints/chrp-open-btn.png) no-repeat;
+        border: 0;
+        outline: none;
+        width: 132px;
+        height: 50px;
+        margin-right: 0;
+        float: left;
+        margin-bottom: 0;
+    }
+
+    .pack1-body .btn-animation:hover,
+    .pack1-body .btn-animation:active {
+        background: url(./images/activity/saints/chrp-open-btn-h.png) no-repeat;     
+    }
+
+    .pack1-body .demo {
+        background: url(./images/activity/saints/chrp-open-demo.png) no-repeat;
+        border: 0;
+        height: 50px;
+        width: 61px;
+        float: left;
+        margin-left: -10px;
+        margin-bottom: 0;
+    }
+
+    .pack1-body .demo:hover,
+    .pack1-body .demo:active {
+        background: url(./images/activity/saints/chrp-open-demo-h.png) no-repeat;   
+    }
+
+    .pack1-body .badge-bottom clearfix {
+        margin-left: 0;
+    }
+
+    .pack1-body .badges-bg .price {
+        float: left;
+        margin-top: -3px;
+        font-family: 'Myriad Pro';
+        font-weight: bolder;
+    }
+
+    .pack1-body .badges-bg .price .text-red {
+        color: #ff0000;
+    }
+
+    .pack1-body .badges-bg .price span {
+        padding-right: 5px;
+    }
+
+    .pack1-body .badges-bg {
+        margin-bottom: 74px;
+        background-image: url(./images/activity/saints/shadow.png);
+        background-position: center 243px;
+        background-repeat: no-repeat;
+    }
+
+    .pack1-body .chrp-pack-bg {
+        position: absolute;
+        top: 23px;
+        left: -30px;
+        pointer-events: none;
+    }
+</style>
+
+<body>
+    @@include('./header.html')
+
+    <!-- breadcrumb start -->
+    <div class="bg-animation">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">
+                        <i class="icon iconfont icon-shouye"></i>Home</a>
+                </li>
+                <li>
+                    <a href="#">FIFA17 packs</a>
+                </li>
+                <li class="active">Play Station 4</li>
+            </ol>
+        </div>
+        <!-- breadcrumb end -->
+
+        <main>
+
+            <div class="container">
+
+                <!-- content start -->
+                <div class="a-content pack1">
+                    <div class="pack1-header">
+                        <div>
+                            <img class="chrp-title" src="./images/activity/saints/chrp-title.png" alt="">
+                            <h4>Open Packs On FIFACOIN.COM To Win Real FIFA 18 Coins</h4>
+                            <p>
+                                Use your member account's coins to open packs.
+                            </p>
+                            <p>
+                                The coins you packed will be added to your member account directly.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pack1-body">
+                        <div class="row">
+                            <div class="col-sm-3 badges-bg">
+                                <div class="badges">
+                                    <img src="../images/packs/badge1.png">
+                                </div>
+                                <div class="badge-bottom clearfix">
+                                    <a href="pack1.html"  class="btn-animation btn-animation-color"></a>
+                                    <span class="demo"></span>
+                                    <div class="price">
+                                        <span>9,000 COINS</span>
+                                        <span>/</span>
+                                        <span class="text-red">10%OFF</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 badges-bg">
+                                <div class="badges">
+                                    <img src="../images/packs/badge2.png">
+                                </div>
+                                <div class="badge-bottom clearfix">
+                                    <button class="btn-animation btn-animation-color"></button>
+                                    <span class="demo"></span>
+                                    <div class="price">
+                                        <span>225,000 COINS</span>
+                                        <span>/</span>
+                                        <span class="text-red">10%OFF</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 badges-bg">
+                                <div class="badges">
+                                    <img src="../images/packs/badge3.png">
+                                </div>
+                                <div class="badge-bottom clearfix">
+                                    <button class="btn-animation btn-animation-color"></button>
+                                    <span class="demo"></span>
+                                    <div class="price">
+                                        <span>10,000 Coins</span>
+                                        <span>/</span>
+                                        <span class="text-red">10%OFF</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 badges-bg">
+                                <div class="badges">
+                                    <img src="../images/packs/badge4.png">
+                                </div>
+                                <div class="badge-bottom clearfix">
+                                    <button class="btn-animation btn-animation-color"></button>
+                                    <span class="demo"></span>
+                                    <div class="price">
+                                        <span>10,000 Coins</span>
+                                        <span>/</span>
+                                        <span class="text-red">10%OFF</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 badges-bg">
+                                <div class="badges">
+                                    <img src="../images/packs/badge5.png">
+                                </div>
+                                <div class="badge-bottom clearfix">
+                                    <button class="btn-animation btn-animation-color"></button>
+                                    <span class="demo"></span>
+                                    <div class="price">
+                                        <span>10,000 Coins</span>
+                                        <span>/</span>
+                                        <span class="text-red">10%OFF</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 badges-bg">
+                                <div class="badges">
+                                    <img src="../images/packs/badge6.png">
+                                </div>
+                                <div class="badge-bottom clearfix">
+                                    <button class="btn-animation btn-animation-color"></button>
+                                    <span class="demo"></span>
+                                    <div class="price">
+                                        <span>10,000 Coins</span>
+                                        <span>/</span>
+                                        <span class="text-red">10%OFF</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 badges-bg">
+                                <div class="badges">
+                                    <img src="../images/packs/badge7.png">
+                                </div>
+                                <div class="badge-bottom clearfix">
+                                    <button class="btn-animation btn-animation-color"></button>
+                                    <span class="demo"></span>
+                                    <div class="price">
+                                        <span>10,000 Coins</span>
+                                        <span>/</span>
+                                        <span class="text-red">10%OFF</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 badges-bg">
+
+                                <div class="badges">
+                                    <img src="../images/packs/badge8.png">
+                                </div>
+                                <div class="badge-bottom clearfix">
+                                    <button class="btn-animation btn-animation-color"></button>
+                                    <span class="demo"></span>
+                                    <div class="price">
+                                        <span>10,000 Coins</span>
+                                        <span>/</span>
+                                        <span class="text-red">10%OFF</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="chrp-pack-bg" src="./images/activity/saints/chrp-pack-bg01.png" alt="">
+                        <img style="top: 485px;" class="chrp-pack-bg" src="./images/activity/saints/chrp-pack-bg02.png" alt="">
+                    </div>
+                </div>
+                <!-- content end -->
+
+            </div>
+
+        </main>
+    </div>
+
+    @@include('./footer.html')
+    @@include('./foot.html')
+</body>
+
+</html>

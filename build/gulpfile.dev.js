@@ -9,6 +9,7 @@ var jshint = require('gulp-jshint'); //js检查 ==> npm install --save-dev jshin
 var uglify = require('gulp-uglify'); //js压缩  
 var concat = require('gulp-concat'); //合并文件  
 var imagemin = require('gulp-imagemin'); //图片压缩 
+var spritesmith = require('gulp.spritesmith');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 var Config = require('./gulpfile.config.js');
@@ -101,11 +102,13 @@ function dev() {
      * 图片处理 
      */
     gulp.task('images:dev', function () {
-        return gulp.src(Config.img.src).pipe(imagemin({
-            optimizationLevel: 3,
-            progressive: true,
-            interlaced: true
-        })).pipe(gulp.dest(Config.img.dist)).pipe(reload({
+        return gulp.src(Config.img.src)
+        // .pipe(imagemin({
+        //     optimizationLevel: 3,
+        //     progressive: true,
+        //     interlaced: true
+        // }))
+        .pipe(gulp.dest(Config.img.dist)).pipe(reload({
             stream: true
         }));
     });
@@ -116,6 +119,19 @@ function dev() {
     gulp.task('font:dev', function () {
         return gulp.src(Config.font.src)
             .pipe(gulp.dest(Config.font.dist)).pipe(reload({
+                stream: true
+            }));
+    });
+
+    gulp.task('spritesmith:dev', function () {
+        return gulp.src(Config.img.dir + '/icon/*.png') // 需要合并的图片地址
+            .pipe(spritesmith({
+                imgName: 'images/icons.png', // 保存合并后图片的地址
+                cssName: 'css/sprite.css', // 保存合并后对于css样式的地址
+                padding: 15, // 合并时两个图片的间距
+                algorithm: 'binary-tree'
+            }))
+            .pipe(gulp.dest(Config.src)).pipe(reload({
                 stream: true
             }));
     });

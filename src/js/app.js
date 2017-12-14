@@ -1,3 +1,45 @@
+;
+(function (window) {
+    function UNTI() {
+        this.init(); // init
+    }
+
+    UNTI.prototype.init = function () {
+
+    }
+
+    UNTI.prototype.UI = {
+        /**
+         * shop banner
+         */
+        shopBanner: function () {
+            var met_prevArrow = '',
+                met_nextArrow = '';
+
+            var $banner = $('#js_shop_slider');
+
+            if ($banner.lenght < 1) {
+                return false;
+            }
+
+            $banner.slick({
+                autoplay: true,
+                dots: true,
+                autoplaySpeed: 4000,
+                pauseOnHover: false,
+                prevArrow: met_prevArrow,
+                nextArrow: met_nextArrow,
+                lazyloadPrevNext: true,
+                cssEase: 'linear',
+                fade: true
+            });
+        },
+    }
+
+    window.Unti = new UNTI();
+
+})(window);
+
 (function() {
 	//tabs
 	$('.commodity-tabs').on('click', '.tab-link', function(){
