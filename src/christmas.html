@@ -10,9 +10,10 @@
 
     .part1 {
         background: url(./images/christmas-part1.png) no-repeat 50% 0;
-        height: 1059px;
+        height: 1215px;
         padding-top: 185px;
         text-align: center;
+        margin-top: -95px;
     }
 
     .container-rw {
@@ -24,7 +25,6 @@
         background: url(./images/christmas-part1-1.png.png) no-repeat 50% 0;
         width: 997px;
         height: 733px;
-        margin-top: 20px;
         margin-left: -37px;
         padding: 92px 30px 0 66px;
     }
@@ -48,7 +48,13 @@
     }
 
     .ex-item-g img {
-        height: 100%;
+        text-align: center;
+    }
+
+    .ex-item-g .value {
+        font-size: 18px;
+        color: #b5b1b1;
+        font-weight: bold;
     }
 
     .ex-item-b {
@@ -122,6 +128,10 @@
         border-right: 0;
     }
 
+    table tr>td img {
+        height: 40px;
+    }
+
     .note {
         text-align: left;
         color: #fff;
@@ -150,6 +160,149 @@
         line-height: 16px;
         margin-right: 12px;
     }
+
+    .christmasModal .modal-dialog {
+        width: 863px;
+        height: 586px;
+        margin: 100px auto;
+        background: url(./images/christmas-modal.png)
+    }
+
+    .christmasModal .modal-content {
+        width: 863px;
+        height: 586px;
+        background: transparent;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        padding: 55px 75px;
+    }
+
+    .christmasModal .title {
+        font-size: 18px;
+        color: #fff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding-bottom: 32px;
+    }
+
+    .palt {
+        color: #fff;
+    }
+
+    .palt li {
+        width: 224px;
+        height: 67px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        float: left;
+        margin-right: 18px;
+        padding: 6px 28px;
+        cursor: pointer;
+    }
+
+    .palt li:last-child {
+        margin-right: 0;
+    }
+
+    .palt li img {
+        float: left;
+    }
+
+    .palt li.active {
+        border-color: #fff45c;
+    }
+
+    .palt li:hover {
+        border-color: #fff45c;
+    }
+
+    .palt-r {
+        float: left;
+        padding-left: 18px;
+        padding-top: 7px;
+    }
+
+    .palt-r>span {
+        display: block;
+    }
+
+    .palt-r .count {
+        color: #ffc42c;
+        margin-left: 5px;
+    }
+
+    .christmasModal .info {
+        color: #fff;
+        margin: 40px 0;
+        font-size: 18px;
+    }
+
+    .christmasModal .info span {
+        color: #ffc42c;
+    }
+
+    .christmasModal .coins {
+        font-size: 18px;
+        color: #fff;
+        margin-top: 60px;
+    }
+
+    .christmasModal .coins .stocking {
+        height: 35px;
+    }
+
+    .christmasModal .coins span {
+        color: #ffc42c;
+    }
+
+    .christmasModal .confirm-btn {
+        display: block;
+        width: 202px;
+        height: 63px;
+        background: url(./images/christmas-btn.png) no-repeat;
+        background-size: cover;
+        font-size: 18px;
+        color: #6e1511;
+        line-height: 65px;
+        text-align: center;
+        margin: 0 auto;
+        font-weight: bold;
+        margin-top: 55px;
+    }
+
+    .info-box {
+        width: 715px;
+        margin: 0 auto;
+        font-size: 14px;
+        margin-top: 55px;
+    }
+
+    .uinfo .account {
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .uinfo .rules {
+        font-size: 14px;
+        color: #ffd100;
+        cursor: pointer;
+    }
+
+    .info-box .palt li {
+        margin-right: 21px;
+        text-align: left;
+    }
+
+    .info-box .palt {
+        margin-top: 25px;
+    }
+
+    .info-box .palt li:last-child {
+        margin-right: 0;
+    }
+
+    .info-box .palt li:hover {
+        border-color: #fff;
+    }
 </style>
 
 <body style="zoom: 1;">
@@ -161,29 +314,73 @@
         <div class="part1">
             <div class="container-rw">
                 <img src="./images/christmas-part1-title.png" alt="">
+                <div class="info-box">
+                    <div class="uinfo clearfix">
+                        <div class="account pull-left">Your Account：
+                            <span style="color: #ffce00">28099461@qq.com</span>
+                        </div>
+                        <div class="rules pull-right">Redeem Rules</div>
+                    </div>
+                    <ul class="palt clearfix">
+                        <li>
+                            <img src="./images/blue-stocking.png" alt="">
+                            <div class="palt-r">
+                                <span>Blue Stockings</span>
+                                <span>x
+                                    <span class="count"> 9</span>
+                                </span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img src="./images/blue-stocking-green.png" alt="">
+                            <div class="palt-r">
+                                <span>Green Stockings</span>
+                                <span>x
+                                    <span class="count"> 9</span>
+                                </span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img src="./images/blue-stocking-red.png" alt="">
+                            <div class="palt-r">
+                                <span>Red Stockings</span>
+                                <span>x
+                                    <span class="count"> 9</span>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
                 <div class="part1-box">
                     <div class="ex-row">
                         <div class="ex-item">
                             <div class="ex-item-g">
-                                <img src="./images/exgold.png" alt="">
+                                <img src="./images/fut-coin-level1.png" alt="">
+                                <span class="value" >2k</span>
                             </div>
                             <a href="javascript: void(0)" class="ex-item-b">REDEEM</a>
                         </div>
                         <div class="ex-item">
                             <div class="ex-item-g">
-                                <img src="./images/exgold.png" alt="">
+                                <img src="./images/fut-coin-level1.png" alt="">
+                                <span class="value" >5k</span>
                             </div>
                             <a href="javascript: void(0)" class="ex-item-b">REDEEM</a>
                         </div>
                         <div class="ex-item">
                             <div class="ex-item-g">
-                                <img src="./images/exgold.png" alt="">
+                                <img src="./images/fut-coin-level2.png" alt="">
+                                <span class="value" >10k</span>
                             </div>
                             <a href="javascript: void(0)" class="ex-item-b">REDEEM</a>
                         </div>
                         <div class="ex-item">
                             <div class="ex-item-g">
-                                <img src="./images/exgold.png" alt="">
+                                <img src="./images/fut-coin-level3.png" alt="">
+                                <span class="value" >20k</span>
                             </div>
                             <a href="javascript: void(0)" class="ex-item-b">REDEEM</a>
                         </div>
@@ -192,21 +389,24 @@
                     <div class="ex-row" style="padding-left: 100px;">
                         <div class="ex-item">
                             <div class="ex-item-g">
-                                <img src="./images/exgold.png" alt="">
+                                <img src="./images/fut-coin-level4.png" alt="">
+                                <span class="value" >50k</span>
                             </div>
                             <a href="javascript: void(0)" class="ex-item-b">REDEEM</a>
                         </div>
 
                         <div class="ex-item">
                             <div class="ex-item-g">
-                                <img src="./images/exgold.png" alt="">
+                                <img src="./images/fut-coin-level4.png" alt="">
+                                <span class="value" >80k</span>
                             </div>
                             <a href="javascript: void(0)" class="ex-item-b">REDEEM</a>
                         </div>
 
                         <div class="ex-item">
                             <div class="ex-item-g">
-                                <img src="./images/exgold.png" alt="">
+                                <img src="./images/fut-coin-level4.png" alt="">
+                                <span class="value" >180k</span>
                             </div>
                             <a href="javascript: void(0)" class="ex-item-b">REDEEM</a>
                         </div>
@@ -215,14 +415,16 @@
                     <div class="ex-row" style="padding-left: 200px;">
                         <div class="ex-item">
                             <div class="ex-item-g">
-                                <img src="./images/exgold.png" alt="">
+                                <img src="./images/fut-coin-level5.png" alt="">
+                                <span class="value" >300k</span>
                             </div>
                             <a href="javascript: void(0)" class="ex-item-b">REDEEM</a>
                         </div>
 
                         <div class="ex-item">
                             <div class="ex-item-g">
-                                <img src="./images/exgold.png" alt="">
+                                <img src="./images/fut-coin-level6.png" alt="">
+                                <span class="value" >650k</span>
                             </div>
                             <a href="javascript: void(0)" class="ex-item-b">REDEEM</a>
                         </div>
@@ -237,10 +439,6 @@
                 <img src="./images/christmas-part2-title.png" alt="">
                 <div class="dec">
                     <p>1.Each order amount reaches the requirements as the form shows can get the corresponding number of stockings.</p>
-                    <p>For example:</p>
-                    <p style="color: #ffba02; font-size: 14px;">(Order 360K on PS4/XBOX1, you will get 3 (blue/green)Stockings, order 360K on PC, you will get 1 red
-                        stocking.)
-                    </p>
                 </div>
                 <div class="part2-box1">
                     <table>
@@ -255,32 +453,32 @@
                             <tr>
                                 <td>PS4/XB1</td>
                                 <td>100K</td>
-                                <td>1 (BULE/GREEN)</td>
+                                <td>1 (BULE <img src="./images/blue-stocking.png" alt="">  /GREEN <img src="./images/blue-stocking-green.png" alt=""> )</td>
                             </tr>
                             <tr>
                                 <td>PS4/XB1</td>
                                 <td>500K</td>
-                                <td>6 (BULE/GREEN)</td>
+                                <td>6 (BULE <img src="./images/blue-stocking.png" alt="">  /GREEN <img src="./images/blue-stocking-green.png" alt=""> )</td>
                             </tr>
                             <tr>
                                 <td>PS4/XB1</td>
                                 <td>1M</td>
-                                <td>15 (BULE/GREEN)</td>
+                                <td>15 (BULE <img src="./images/blue-stocking.png" alt="">  /GREEN <img src="./images/blue-stocking-green.png" alt=""> )</td>
                             </tr>
                             <tr>
                                 <td>PC</td>
                                 <td>300K</td>
-                                <td>1 (RED)</td>
+                                <td>1 (RED <img src="./images/blue-stocking-red.png" alt="">)</td>
                             </tr>
                             <tr>
                                 <td>PC</td>
                                 <td>1M</td>
-                                <td>6 (RED)</td>
+                                <td>6 (RED <img src="./images/blue-stocking-red.png" alt="">)</td>
                             </tr>
                             <tr>
                                 <td>PC</td>
                                 <td>3M</td>
-                                <td>20 (RED)</td>
+                                <td>20 (RED <img src="./images/blue-stocking-red.png" alt="">)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -303,42 +501,42 @@
                             <tr>
                                 <td>PS4/XB1</td>
                                 <td>100K</td>
-                                <td>1 (BULE/GREEN)</td>
+                                <td>1 (BULE <img src="./images/blue-stocking.png" alt="">  /GREEN <img src="./images/blue-stocking-green.png" alt=""> )</td>
                             </tr>
                             <tr>
                                 <td>PS4/XB1</td>
                                 <td>200k</td>
-                                <td>2 (BULE/GREEN)</td>
+                                <td>2 (BULE <img src="./images/blue-stocking.png" alt="">  /GREEN <img src="./images/blue-stocking-green.png" alt=""> )</td>
                             </tr>
                             <tr>
                                 <td>PS4/XB1</td>
                                 <td>250k</td>
-                                <td>3 (BULE/GREEN)</td>
+                                <td>2 (BULE <img src="./images/blue-stocking.png" alt="">  /GREEN <img src="./images/blue-stocking-green.png" alt=""> )</td>
                             </tr>
                             <tr>
                                 <td>PS4/XB1</td>
                                 <td>500k</td>
-                                <td>6 (BULE/GREEN)</td>
+                                <td>6 (BULE <img src="./images/blue-stocking.png" alt="">  /GREEN <img src="./images/blue-stocking-green.png" alt=""> )</td>
                             </tr>
                             <tr>
                                 <td>PS4/XB1</td>
                                 <td>1M</td>
-                                <td>15 (BULE/GREEN)</td>
+                                <td>15 (BULE <img src="./images/blue-stocking.png" alt="">  /GREEN <img src="./images/blue-stocking-green.png" alt=""> )</td>
                             </tr>
                             <tr>
                                 <td>PC</td>
                                 <td>250k</td>
-                                <td>1 (RED)</td>
+                                <td>1 (RED <img src="./images/blue-stocking-red.png" alt="">)</td>
                             </tr>
                             <tr>
                                 <td>PC</td>
                                 <td>500k</td>
-                                <td>3 (RED)</td>
+                                <td>3 (RED <img src="./images/blue-stocking-red.png" alt="">)</td>
                             </tr>
                             <tr>
                                 <td>PC</td>
                                 <td>1M</td>
-                                <td>7 (RED)</td>
+                                <td>7 (RED <img src="./images/blue-stocking-red.png" alt="">)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -364,15 +562,87 @@
     </div>
 
     @@include('./footer.html')
+
+    <div class="modal fade christmasModal" id="christmasModal" tabindex="-1" role="dialog" aria-labelledby="christmasModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="title">
+                    Confirmation
+                </div>
+
+                <div class="info clearfix">
+                    <div class="win pull-left">
+                        You Own:
+                    </div>
+                    <div class="console pull-right">
+                        Current Console:
+                        <span>PS4</span>
+                    </div>
+                </div>
+
+                <ul class="palt clearfix">
+                    <li class="active">
+                        <img src="./images/blue-stocking.png" alt="">
+                        <div class="palt-r">
+                            <span>Blue Stockings</span>
+                            <span>x
+                                <span class="count"> 9</span>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="./images/blue-stocking-green.png" alt="">
+                        <div class="palt-r">
+                            <span>Green Stockings</span>
+                            <span>x
+                                <span class="count"> 9</span>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="./images/blue-stocking-red.png" alt="">
+                        <div class="palt-r">
+                            <span>Red Stockings</span>
+                            <span>x
+                                <span class="count"> 9</span>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="coins">
+                    You Are Going to use
+                    <span style="color: #ffc42c">12</span>
+                    <img class="stocking" src="./images/blue-stocking.png" alt=""> to Redeem:
+                    <span>2k Coins</span>
+                </div>
+
+                <a class="confirm-btn" href="###">CONFIRM</a>
+            </div>
+        </div>
+    </div>
+
     @@include('./foot.html')
     <script src="./js/snowfall.js"></script>
     <script>
-        $(document).snowfall('clear');
-        $(document).snowfall({
-            image: "./images/snow.png",
-            flakeCount: 70,
-            minSize: 5,
-            maxSize: 22
+        // $(document).snowfall('clear');
+        // $(document).snowfall({
+        //     image: "./images/snow.png",
+        //     flakeCount: 200,
+        //     minSize: 5,
+        //     maxSize: 22
+        // });
+
+        $('.ex-item-b').on('click', function () {
+            $('#christmasModal').modal('show');
+        });
+
+        $('.rules').on('click', function () {
+            $('html, body').animate({
+                scrollTop: $(".part2").offset().top + 28
+            }, 100);
         });
     </script>
 </body>

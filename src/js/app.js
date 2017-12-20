@@ -33,7 +33,26 @@
                 cssEase: 'linear',
                 fade: true
             });
-        },
+		},
+		
+		showGiftCard: function (num, pw, bg, theme) {
+			$('.gift-card').removeClass('theme-black');
+			$('.gift-card').css('background', 'url(' + bg + ') no-repeat').addClass(theme);
+			$('#card-num').html(num);
+			$('#card-pw').html(pw);
+			
+			layer.open({
+				type: 1,
+				title: false,
+				shade: 0.6,
+				content: $('.gift-card'),
+				area: ['410px', '250px'],
+				skin: 'layer-gift-card',
+				cancel: function(){
+					console.log('cancel');
+				}
+			});
+		}
     }
 
     window.Unti = new UNTI();

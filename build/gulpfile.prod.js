@@ -64,7 +64,11 @@ function prod() {
         return gulp.src([
                 Config.js.dir + '/jquery1.12.4.min.js',
                 Config.js.dir + '/bootstrap.min.js',
-                Config.js.dir + '/jquery.mCustomScrollbar.min.js'
+                Config.js.dir + '/client.js',
+                Config.js.dir + '/countUp.min.js',
+                Config.js.dir + '/slick.min.js',
+                Config.js.dir + '/jquery.mCustomScrollbar.min.js',
+                Config.js.dir + '/jquery.animateNumber.min.js'
             ])
             // .pipe(jshint('.jshintrc'))
             // .pipe(jshint.reporter('default'))
@@ -73,6 +77,7 @@ function prod() {
             // .pipe(gulpif(filterJs, uglify()))
             .pipe(gulp.dest(Config.js.dist));
     });
+
     /** 
      * 合并所有js文件并做压缩处理 
      */
@@ -87,9 +92,9 @@ function prod() {
 
     gulp.task('js-concat', function () {
         return gulp.src([
+                Config.js.dir + '/app.js',
                 Config.js.dir + '/dropdown.js',
-                Config.js.dir + '/layer.js',
-                Config.js.dir + '/app.js'
+                Config.js.dir + '/layer.js'
             ])
             .pipe(concat(Config.js.build_name))
             .pipe(gulp.dest(Config.js.dist))
@@ -120,7 +125,7 @@ function prod() {
             .pipe(gulp.dest(Config.font.dist));
     });
 
-    gulp.task('build', ['html', 'css', 'sass', 'js', 'assets', 'images', 'font']);
-    // gulp.task('build', ['js-concat']);
+    //gulp.task('build', ['html', 'css', 'sass', 'js', 'js-concat', 'assets', 'images', 'font']);
+    gulp.task('build', ['css', 'sass']);
 }
 module.exports = prod;

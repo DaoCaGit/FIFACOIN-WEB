@@ -63,19 +63,35 @@ body {
 .pack1-body {
     padding-top: 56px;
     padding-bottom: 78px;
+    margin: 0 -35px;
+}
+
+.badges-bg {
+    width: 25%;
+    float: left;
 }
 
 .pack1-body .badges-bg {
-    padding-left: 47px;
-    padding-right: 47px;
-    margin-bottom: 103px;
+    margin-bottom: 35px;
     background-image: url('../images/packs/shadow.png');
     background-position: 50px 243px;
     background-repeat: no-repeat;
+    text-align: center;
+}
+
+.pack1-body .badges-bg .badges {
+    position: relative;
+    width: 215px;
+    height: 255px;
+    margin: 0 auto;
+    margin-bottom: 27px;
 }
 
 .pack1-body .badges-bg img {
-    margin-bottom: 27px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: auto;
 }
 
 .pack1-body .btn-animation {
@@ -212,7 +228,7 @@ body {
 
 .pack2 .pack2-right .container {
     padding: 0;
-    width: 512px;
+    width: 512px !important;
     text-align: center;
     color: #999;
 }
@@ -1580,7 +1596,7 @@ body {
 
 @media screen and (min-width:1200px) {
     .turn-table .container {
-        width: 1600px;
+        width: 1600px !important;
     }
 }
 

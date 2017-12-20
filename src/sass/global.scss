@@ -618,7 +618,6 @@ fieldset[disabled] .btn-primary:hover {
     min-width: 130px;
 }
 
-
 .masthead-top .language-show li {
     position: relative;
     display: inline-block;
@@ -1016,6 +1015,10 @@ fieldset[disabled] .btn-primary:hover {
 .navbar-nav>li>a.chat:hover {
     color: #0096cd;
     background-color: transparent;
+}
+
+.carousel-inner>.item {
+    margin-top: 0;
 }
 
 .carousel-inner>.item>a>img,
@@ -2263,4 +2266,25 @@ dl.followus dd img {
 
 .icon-img {
     display: inline-block;
+}
+
+.radio-group {
+    .btn {
+        background: #e4e4e4;
+        font-size: 14px;
+        color: #333;
+        border: 0;
+        border-radius: 0;
+        margin-right: 10px;
+    }
+    .btn.active,
+    .btn:active,
+    .btn:focus,
+    .btn:hover {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        outline: 0;
+        background: #1cb94b;
+        color: #fff;
+    }
 }

@@ -43,7 +43,7 @@ var Config = {
         dist: DIST_DIR + 'fonts' // fonts文件build后存放的目录：./dist/fonts 
     },
     rev: {
-        dist: DIST_DIR + 'rev' // fonts文件build后存放的目录：./dist/fonts  
+        dist: DIST_DIR + 'rev'
     }
 };
 
