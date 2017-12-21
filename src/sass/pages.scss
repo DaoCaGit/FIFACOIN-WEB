@@ -2624,7 +2624,7 @@ table {
 		.good-img {
 			margin-bottom: 20px;
 			width: 180px;
-			height: 112px;
+			height: auto;
 		}
 		> span {
 			display: block;
@@ -2683,14 +2683,18 @@ table {
 		padding-left: 185px;
 		float: left;
 		width: 720px;
+		img {
+			width: 320px;
+			height: auto;
+		}
 	}
 	.good-show-r {
 		float: left;
-		padding-top: 48px;
+		padding-top: 33px;
 		padding-right: 32px;
 		width: 480px;
 		.good-show-r-t {
-			padding-bottom: 25px;
+			padding-bottom: 10px;
 			.good-name {
 				font-size: 22px;
 				color: #333;
@@ -2702,10 +2706,10 @@ table {
 			}
 		}
 		.good-show-r-b {
-			padding-top: 30px;
+			padding-top: 20px;
 			border-top: 1px solid #e7e7e7;
 			.group {
-				margin-bottom: 22px;
+				margin-bottom: 18px;
 				font-size: 14px;
 				line-height: 25px;
 				.group-label {
@@ -2720,10 +2724,16 @@ table {
 						line-height: 25px;
 					}
 				}
-				.amount {
+				.value {
 					color: #333;
 					font-size: 14px;
 				}
+			}
+			.select-shop {
+				height: 25px;
+				min-width: 90px;
+				border: 1px solid #e7e7e7;
+				padding: 0 5px;
 			}
 			.btn-redeem {
 				font-size: 18px;
@@ -2754,6 +2764,10 @@ table {
 		.sidebar-item-l {
 			width: 88px;
 			float: left;
+			&>img {
+				width: 88px;
+				height: auto;
+			}
 		}
 		.sidebar-item-r {
 			float: left;

@@ -2288,3 +2288,27 @@ dl.followus dd img {
         color: #fff;
     }
 }
+
+.img-tips {
+    position: relative;
+    > img {
+        display: none;
+        position: absolute;
+        left: 15px;
+        left: 115px;
+        bottom: 10px;
+    }
+    &:hover {
+        > img {
+            display: inline-block;
+            height: auto;
+            padding: 4px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            -webkit-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+    }
+}

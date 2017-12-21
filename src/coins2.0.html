@@ -27,7 +27,7 @@
 				<!-- content start -->
 				<div class="content">
 					<h2 class="content-title">FIFA 17 Coins 2.0 -PS4</h2>
-					<div class="m-img hide" style="height:128px; margin-bottom: 30px;" >
+					<div class="m-img hide" style="height:128px; margin-bottom: 30px;">
 						<a href="coins2.0.html">
 							<img id="c_banner" src="../images/activity/chrp-banner.jpg" alt="" style="z-index: 999;">
 						</a>
@@ -306,11 +306,76 @@
 		</main>
 	</div>
 
-	@@include('./footer.html')
-	@@include('./foot.html')
+	<!-- Disclaimer -->
+	<div class="modal modal-disclaimer" id="disclaimerModal" tabindex="-1" role="dialog" aria-labelledby="disclaimerModal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="exampleModalLabel">
+						<?php echo i18n('Message'); ?>
+					</h4>
+				</div>
+				<div class="modal-body">
+					<form id="disclaimer_form">
+						<p>
+							<b>Before we get started, you need to confirm</b>
+						</p>
+						<div class="checkbox" style="margin-bottom: 15px;">
+							<label style="font-weight: normal;">
+								<input type="checkbox" value="1" name="verify"> Verify your account: CORRECT password, FUT security answer and backup code.
+							</label>
+						</div>
+
+						<div class="checkbox" style="margin-bottom: 15px;">
+							<label style="font-weight: normal;">
+								<input type="checkbox" value="1" name="activated"> <a class="img-tips" href="./images/20171206161946_11288.jpg">Transfer Market <img width="750px" src="./images/20171206161946_11288.jpg" alt=""></a> is activated on Web App.
+							</label>
+						</div>
+
+						<div class="checkbox" style="margin-bottom: 15px;">
+							<label style="font-weight: normal;">
+								<input type="checkbox" value="1" name="remained"> At least 5000 coins remained.
+							</label>
+						</div>
+
+						<div class="checkbox" style="margin-bottom: 15px;">
+							<label style="font-weight: normal;">
+								<input type="checkbox" value="1" name="authorized"> We are authorized to use your Origin account, including change the account’s email and password. The ownership is
+								by us.
+							</label>
+						</div>
+
+					</form>
+				</div>
+				<div class="modal-footer" style="text-align: center;">
+					<button type="button" class="btn btn-lm btn-warning" id="disclaimerConfirm">Continue</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	@@include('./footer.html') @@include('./foot.html')
 
 	<script type="text/javascript">
+		$('.btn-leveling').on('click', function () {
+			$('#disclaimerModal').modal('show');
+		});
 
+		$('#disclaimerModal').modal('show');
+
+		$('#disclaimerConfirm').on('click', function () {
+			if ($('input[name="verify"]').is(':checked') && $('input[name="activated"]').is(':checked') && $(
+					'input[name="remained"]').is(':checked') && $('input[name="authorized"]').is(':checked')) {
+				$('#disclaimerModal').modal('hide');
+				//window.location.href = $('.btn-leveling').data('href');
+			} else {
+				$('#disclaimer_form').find('.erorr').remove();
+				$('#disclaimer_form').append('<span class="erorr red_tips" >Please confirm the terms above to continue.</span>');
+			}
+		});
 	</script>
 </body>
 
